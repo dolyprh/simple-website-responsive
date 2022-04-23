@@ -1,0 +1,486 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+    
+}
+body{
+    overflow-x: hidden;
+}
+header .max-width{
+    display: flex;
+	align-items: center;
+    justify-content: space-between;
+}
+header{
+    position: fixed;
+	width: 100%;
+	z-index: 2;
+	font-family: sans-serif;
+    justify-content: space-between;
+	transition: 0.3s;
+    padding: 5px 100px;
+}
+header.sticky{
+    background-color: rgb(87, 71, 150) ;
+}
+.logo{
+	font-size: 32px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 600;
+	border: 5px double rgb(160, 136, 255);
+	padding: 3px;
+    transition: 0.3s;
+    width: 210px;
+	border-radius: 15px;
+}
+ .logo a{
+    color: #fff;
+ }
+ .logo a span{
+     color: rgb(160, 136, 255);
+ }
+ header.sticky .logo{
+    border: 0;
+ }
+ header.sticky a span{
+    color: white ;
+}
+header ul{
+    list-style: none;
+    font-family: sans-serif;
+    color: white;
+}
+ ul li{
+     display: inline-block;
+     margin: 20px 10px 0 20px;
+ }
+ ul li a{
+     text-decoration: none;
+     text-align: center;
+     color: white;
+     font-size: 18px;
+     transition: 0.6s ease;
+     padding: 5px 10px;
+     border-radius: 50px;
+ }
+
+ ul li a:hover{
+    text-decoration: underline;
+    background-color: rgb(160, 136, 255);
+    color: rgb(35, 19, 94) ;
+ }
+.home{
+    padding: 50px 0;
+    background-color: rgb(35, 19, 94);
+    
+}
+.home .max-width{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.home .content-left{
+    width: 30%;
+    margin-left: 50px;
+}
+.home .content-left .text{
+    font-size: 32px;
+    color: rgb(240, 240, 240);
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 7px 3px 20px rgb(32, 32, 32);
+}
+.home .content-left span{
+    font-size: 70px;
+    float: right;
+    margin-top: -10px;
+}
+.home .content-left .btn{
+    margin-top: 20px;
+    
+}
+.home .content-left button{
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(35, 19, 94);
+    background-color: rgb(160, 136, 255) ;
+    border: 0px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.home .content-left .title{
+    margin-top: 50px;
+    font-family: sans-serif;
+    color: rgb(150, 135, 206);
+    opacity: transparant;;
+    text-align: justify;
+}
+.home .content-right{
+    width: 50%;
+}
+.home .content-right img{
+    width: 500px;
+}
+
+.toggle{
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	position: relative;
+	display: none;
+	right: 10px;
+}
+.toggle input{
+	position: absolute;
+	width: 40px;
+	height: 28px;
+	left: -5px;
+	top: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2;
+}
+.toggle span{
+	display: none;
+	width: 26px;
+	height: 2px;
+	background-color: #fff;
+	padding: 2px;
+	border-radius: 3px;
+	transition: all 0.5s;
+}
+.toggle span:nth-child(2){
+	transform-origin: 0 0;
+	
+}
+.toggle span:nth-child(4){
+	transform-origin: 0 100%;
+	
+}	
+.toggle input:checked ~ span:nth-child(2){
+	transform:rotate(45deg) translate(-1px, -1px); 
+}
+.toggle input:checked ~ span:nth-child(4){
+	transform: rotate(-45deg) translate(-1px, 0);
+}
+.toggle input:checked ~ span:nth-child(3){
+	transform: scale(0);
+}
+
+/*content*/
+main{
+    
+    padding: 20px 100px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+article{
+    text-align: center;
+}
+main .content img{
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 600px;
+}
+.content{
+    color: rgb(35, 19, 94);
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.content article h1{
+    font-size: 28px;
+    width: 70%;
+    margin-left: 150px;
+    padding: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content article h5{
+    color: rgb(124, 124, 124);
+    text-align: left;
+    margin-left: 120px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+main .content p{
+    text-align: justify;
+    font-size: 18px;
+    font-family:'Segoe UI', sans-serif;
+}
+
+main .sub-content{
+    display: flex;
+    padding: 50px 0 ;
+    color: rgb(160, 136, 255);
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .sub-content .sub-left{
+    width: 45%;
+}
+main .sub-content .sub-right{
+    width: 55%;
+    text-align: justify;
+    padding: 50px 0;
+}
+
+main .sub-content .sub-right-content{
+    width: 45%;
+    padding: 0 100px;
+}
+main .sub-content .sub-left-content{
+    width: 55%;
+    text-align: justify;
+}
+
+.berita{
+    width: 100%;
+    background-color: rgb(87, 71, 150) ;
+    color: white;
+    padding: 50px;
+    
+}
+.berita h1{
+    font-size: 32px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.berita .max-width{
+    display: flex;
+    flex-direction: row;
+}
+.berita .box{
+    flex-wrap: wrap;
+    width: 320px;
+    height: 340px;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px 0 rgb(160, 136, 255);
+    background-color: rgb(245, 245, 245);
+}
+.berita img{
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.berita .box a{
+    font-size: 18px;
+    text-align: center;
+    font-family: sans-serif ;
+}
+
+.about{
+    padding: 100px 0;
+    margin: 0 auto;
+}
+.about .about-me{
+    width: 320px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: rgb(87, 71, 150) ;
+    margin: 0 auto;
+    transition: all 0.3s;
+}
+.about .about-me:hover{
+    box-shadow: 0 10px 10px 0 rgb(0, 0, 0);
+}
+.about .about-me .profil{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(160, 136, 255);
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-image: url("image/profil.png");
+}
+.about-me .nama{
+    font-size: 24px;
+    color: rgb(160, 136, 255);
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 4px 8px 0 rgb(50, 38, 99);
+    margin-bottom: 10px;
+
+}
+.about .about-me .title{
+    width: 60%;
+    padding: 5px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 5px 8px 0 white;
+    font-size: 18px;
+    font-family: fantasy;
+    background-color: rgb(126, 110, 182) ;
+    color: rgb(231, 225, 255);
+
+}
+
+.about .about-me .sosmed{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10px;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    list-style: none;
+    justify-content: space-between;
+}
+.about .about-me .sosmed li{
+    background-color: rgb(126, 110, 182);
+    border-radius: 20px;
+    padding: 2px 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.about .about-me .sosmed li:hover{
+    box-shadow: 0 5px 8px 0 white;
+}
+
+footer{
+	background: #0e141e;
+	height: 30px;
+}
+footer .ltr{
+	text-align: center;
+	font-size: 20px;
+	color:#fff;
+}
+footer span{
+	color: rgb(50, 38, 99);
+}
+
+@media screen and (max-width : 576px) {
+    .max-width{
+		padding: 0;
+        margin: 0;
+	}
+    .toggle span{
+		display: block;
+	}
+	.toggle{
+		display: flex;
+        z-index: 2;
+	}
+    header{
+        padding: 10px;
+        z-index: 100;
+    }
+	header ul{
+        display: flex;
+		position: absolute;
+        flex-direction: column;
+		background:rgb(35, 19, 94);
+		width: 100%;
+        height: 32vh;
+        line-height: 20px;
+        justify-content: space-between;
+        align-items: center;
+        right: 0;
+		top	: 0;
+        z-index: 1;
+        transition: all 0.6s;
+        transform: translateX(100%);
+        opacity: 0;
+	}
+    header ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .home .content-left{
+        width: 100%;
+        float: none;
+        margin: 0 10px;
+        z-index: 2;
+    }
+    .home .content-left .btn{
+        text-align: center;
+    }
+    .home .content-left .text{
+        font-size: 24px;
+    }
+    .home .content-left .title{
+        color: rgb(224, 224, 224);
+    }
+    .home .content-left span{
+        margin-right: 140px;
+    }
+    .home .content-right{
+        width: 100%;
+        float: none;
+        margin: 0;
+        margin-top: -450px;
+    }
+    .home .content-right img{
+        width: 400px;
+        opacity: 0.3;
+    }
+
+    main { 
+        padding: 0;
+    }
+    main .content{
+        margin: 40px 10px;
+        width: 100%;
+    }
+    main .content h1{
+        font-size: 18px;
+        margin: 0 ;
+        width: 100%;
+        padding: 10px 0 ;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    main .content h5{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    main .content img{
+        width: 100%;
+    }
+    main .content article {
+        width: 90%;
+        padding: 0;
+    }
+    main .sub-content{
+        width: 100%;
+        padding: 0;
+    }
+    main .sub-content h2{
+        text-align: center;
+    }
+    main .sub-content .sub-left img{
+        width: 100%;
+    }
+    main .sub-content .sub-right p{
+        margin:0 10px;
+        text-align: center;
+    }
+    main .sub-content .sub-left-content p{
+        margin: 50px 10px;
+        text-align: center;
+
+    }
+    main .sub-content .sub-right-content{
+        margin: 0 ;
+        padding: 0 ;
+    }
+    .berita{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .berita .max-width{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+}
